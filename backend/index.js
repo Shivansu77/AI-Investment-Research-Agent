@@ -40,7 +40,7 @@ const model = new ChatGoogleGenerativeAI({
 });
 
 const searchClient = tavily({
-  apiKey: process.env.TAVILY_API_KEY,
+  apiKey: process.env.TAVILY_API_KEY ?? process.env.tavily_api,
 });
 
 function parseCompany() {
